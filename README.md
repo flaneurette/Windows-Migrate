@@ -1,4 +1,4 @@
-# Windows Migration Script
+# Windows (10/11+) Migration Script
 
 A **one-click Windows migration and restore toolkit** in a single batch file.  
 
