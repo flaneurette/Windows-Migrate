@@ -63,7 +63,7 @@ This script allows you to **backup and restore user data, system settings, and i
 
 ## Safety Notes
 
-- **Registry imports**: Only safe keys (like HKCU) are recommended. Be careful with HKLM/HKCC.  
+- **Registry imports**: Only safe keys (like HKCU) are recommended. Be careful with HKLM/HKCC. The script just makes a backup of the ENTIRE registry, it is not recommended to import it as such! Thus, there is no .bat file to do this. Only do it manually if you are SURE that nothing will break! especially on different windows platforms. **You are hereby forewarned.**
 - **Browser profiles**: Chrome, Edge, Firefox must be **closed** during restore.  
 - **Wi-Fi & Firewall**: Admin rights required. Backups of current configurations are automatically created.  
 - The script uses **interactive prompts** to prevent accidental overwrites. 
