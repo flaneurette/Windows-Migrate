@@ -55,7 +55,7 @@ This script allows you to **backup and restore user data, system settings, and i
 
 ## Requirements
 
-- **Windows 10 or 11**
+- **Windows 10 or 11+**
 - **Administrator privileges** for some steps (Registry, Firewall, Wi-Fi)
 - Optional: **7-Zip** for faster and more reliable ZIP compression
 - **Winget** for automated program installation
