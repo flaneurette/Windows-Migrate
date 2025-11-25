@@ -49,7 +49,6 @@ This script allows you to **backup and restore user data, system settings, and i
 - Restore **Browser profiles** (Chrome, Edge, Firefox)
 - Restore **PATH** environment variable
 - Restore **Firewall rules**
-- Import **registry keys** (HKCU and optional others)
 - Install programs automatically using **Winget** (silent install if available)
 
 ---
@@ -60,33 +59,6 @@ This script allows you to **backup and restore user data, system settings, and i
 - **Administrator privileges** for some steps (Registry, Firewall, Wi-Fi)
 - Optional: **7-Zip** for faster and more reliable ZIP compression
 - **Winget** for automated program installation
-
----
-
-## Usage
-
-### Backup (Old PC)
-
-1. Download the script and run it as **administrator**.
-2. Follow the prompts to backup data to: %USERPROFILE%\Desktop\Migrate\Data
-
-
-3. A **timestamped ZIP** of all collected data will be created on the Desktop.
-
----
-
-### Restore (New PC)
-
-1. Copy the backup folder or ZIP to the new PC.
-2. Run the script as **administrator**.
-3. Follow **interactive prompts** to restore:
-- Wi-Fi profiles
-- Browser profiles
-- PATH environment variable
-- Firewall rules
-- Programs via Winget
-4. Logs are saved in: %USERPROFILE%\Desktop\Migrate\Data\Logs
-
 ---
 
 ## Safety Notes
