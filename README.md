@@ -21,7 +21,7 @@ This script allows you to **backup and restore user data, system settings, and i
 7. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
 **Notes:**
-- Other files and settings do not have BAT scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
+- Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
 - There is also a `Migrate/Install/Checksums.bat` file, which can be used to verify newly installed software. It scans the `/Downloads/` folder and generates checksums if desired.
 
 ---
