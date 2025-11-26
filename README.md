@@ -14,10 +14,11 @@ This script allows you to **backup and restore user data, system settings, and i
 ### On the new Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Then, follow these steps **in order** for maximum safety:
 2. As **administrator**, right-click `Migrate/Install/InstallFirewall.bat` to restore firewall rules.
-3. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
-4. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
-5. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install software using Winget (required for automated program installation).
-6. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+3. As **administrator**, right-click `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
+4. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
+5. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
+6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install software using Winget (required for automated program installation).
+7. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
 **Notes:**
 - Other files and settings do not have BAT scripts and require **manual installation or transfer** due to security and reliability reasons.  
