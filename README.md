@@ -9,7 +9,7 @@ This script allows you to **backup and restore user data, system settings, and i
 ### On the old Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**.
 2. As **administrator**, right-click `Migrate/Export/ExportWindowsSettings.bat` to export all Windows settings.
-3. As **administrator**, right-click `Migrate/Export/CopyUserData.bat` to export user data (backup to external disk).
+3. As **administrator**, right-click `Migrate/Export/CopyUserData.bat` to export user data (backup AppData & Desktop to external disk).
 
 ### On the new Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Then, follow these steps **in order** for maximum safety:
