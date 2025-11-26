@@ -45,9 +45,10 @@ echo === PATH exported to %OUTFILE% ===
 echo === Copying Installed Programs (registry) ===
 echo Installed Programs (registry) > "%TARGET%\Lists\installed_programs_registry.txt"
 powershell -Command "Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object { $_.DisplayName } | Select-Object -ExpandProperty DisplayName" >> "%TARGET%\Lists\installed_programs_registry.txt"
+
 echo === Copying Installed Programs (Wow6432Node) ===
-echo Installed Programs (Wow6432Node) > "%TARGET%\Lists\installed_programs_wow64.txt" 
-powershell -Command "Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object { $_.DisplayName } | Select-Object -ExpandProperty DisplayName" >> "%TARGET%\Lists\installed_programs_registry_wow64.txt"
+echo Installed Programs (Wow6432Node) > "%TARGET%\Lists\installed_programs_wow64.txt"
+powershell -Command "Get-ItemProperty HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where-Object { $_.DisplayName } | Select-Object -ExpandProperty DisplayName" >> "%TARGET%\Lists\installed_programs_wow64.txt"
 
 :: Browser profiles
 :: -----------------------
