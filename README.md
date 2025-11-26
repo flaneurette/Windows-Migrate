@@ -12,7 +12,7 @@ This script allows you to **backup and restore user data, system settings, and i
 3. As **administrator**, right-click `Migrate/Export/CopyUserData.bat` to export user data (backup).
 
 ### On the new Windows PC:
-1. Copy the `Migrate` folder to your **Desktop**.
+1. Copy the `Migrate` folder to your **Desktop**. Then, follow these steps **in order** for maximum safety:
 2. As **administrator**, right-click `Migrate/Install/InstallFirewall.bat` to restore firewall rules.
 3. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
 4. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
