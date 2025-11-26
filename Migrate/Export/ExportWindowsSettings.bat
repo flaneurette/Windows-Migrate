@@ -33,6 +33,7 @@ mkdir "%TARGET%\Users" 2>nul
 mkdir "%TARGET%\Logs" 2>nul
 mkdir "%TARGET%\Archive" 2>nul
 mkdir "%TARGET%\Firewall" 2>nul
+mkdir "%TARGET%\Drivers" 2>nul
 set BACKUP_REG=%TARGET%\Registry
 mkdir "%BACKUP_REG%" 2>nul
 
@@ -109,6 +110,14 @@ type "%WINDIR%\System32\drivers\etc\hosts" > "%TARGET%\Lists\hosts.txt"
 echo === Exporting tasks scheduler config... ===
 :: Copy Task Scheduler tasks (configuration)
 robocopy "%WINDIR%\System32\Tasks" "%TARGET%\System\Tasks" /E /R:2 /W:2 >> "%LOG%" 2>&1
+
+:: Export all drivers
+set "EXPORT_DIR_DRIVERS=%TARGET%\Drivers"
+
+mkdir "%EXPORT_DIR_DRIVERS%" 2>nul
+dism /online /export-driver /destination:"%EXPORT_DIR_DRIVERS%"
+
+echo === Drivers exported to: %EXPORT_DIR_DRIVERS% ===
 
 :: Printers export (drivers list)
 echo === Exporting printer config via powershell... ===
