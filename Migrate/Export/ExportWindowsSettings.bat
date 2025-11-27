@@ -34,6 +34,7 @@ mkdir "%TARGET%\Logs" 2>nul
 mkdir "%TARGET%\Archive" 2>nul
 mkdir "%TARGET%\Firewall" 2>nul
 mkdir "%TARGET%\Drivers" 2>nul
+mkdir "%TARGET%\Keys" 2>nul
 set BACKUP_REG=%TARGET%\Registry
 mkdir "%BACKUP_REG%" 2>nul
 
@@ -41,6 +42,10 @@ mkdir "%BACKUP_REG%" 2>nul
 set "OUTFILE=%TARGET%\Paths\PATH_user.txt"
 echo %PATH% > "%OUTFILE%"
 echo === PATH exported to %OUTFILE% === 
+
+:: Export product key
+echo === Exporting product key... === 
+powershell -Command "function Get-WindowsKey { $key = (Get-WmiObject -Query 'select * from SoftwareLicensingService').OA3xOriginalProductKey; if ($key) { Write-Output 'Your Windows product key is: ' $key } else { Write-Output 'No product key found in BIOS/UEFI.' } } Get-WindowsKey" > "%TARGET%\Keys\ProductKey.txt"
 
 echo === Copying Installed Programs (registry) ===
 echo Installed Programs (registry) > "%TARGET%\Lists\installed_programs_registry.txt"
@@ -168,3 +173,4 @@ echo A timestamped zip was created in: %USERPROFILE%\Desktop\Migrate
 echo See log: %LOG%
 pause
 exit /b
+
