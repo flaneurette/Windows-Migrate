@@ -57,7 +57,6 @@ This script allows you to **backup and restore user data, system settings, and i
 - **Windows 10 or 11+**
 - **Administrator privileges** for some steps (Registry, Firewall, Wi-Fi)
 - Optional: **7-Zip** for faster and more reliable ZIP compression
-- **Winget** for automated program installation
 - Enough diskspace. The registry export can take up 500MB+ and a Chrome user Folder 2GB+. Prepare at least 5GB of free space!
 ---
 
