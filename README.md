@@ -24,7 +24,7 @@ This script allows you to **backup and restore user data, system settings, and i
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
 - There is also a `Migrate/Install/Checksums.bat` file, which can be used to verify newly installed/downloaded software. It scans the `/Downloads/` folder and generates checksums if desired.
-
+- Upon software installation: The software guesses installed software names for winget. The install software program is therefore interactive, and lists possible package candidates, and then asks the user to select an option for each package to install. As winget hosts many versions of different packages. Installation of software with winget is quick, faster than manually downloading and installing. So we recommende using it.
 ---
 
 ## Features
