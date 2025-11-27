@@ -12,7 +12,7 @@ This script allows you to **backup and restore user data, system settings, and i
 3. As **administrator**, right-click `Migrate/Export/CopyUserData.bat` to export user data (backup AppData & Desktop to external disk).
 
 **Note**: Be sure that you copy the /Migrate/ folder from the old PC's Desktop to the new PC's Desktop. 
-(The CopyUserData.bat script also copies the entire desktop on your old PC to your external drive, so on the new PC you should copy the /Migrate/folder from the external backup to your new desktop!}
+(The CopyUserData.bat script also copies the entire desktop on your old PC to your external drive, so on the new PC you should copy the /Migrate/folder from the external backup to your new desktop!)
 Then proceed..
 
 ### On the new Windows PC:
