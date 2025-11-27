@@ -19,8 +19,9 @@ This script allows you to **backup and restore user data, system settings, and i
 5. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
 6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install all exported software (using winget)
 7. As **administrator**, right-click `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
-8. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
-9. After this: manually copy your exported /AppData/ folder (from external drive) to the new PC. 
+8. Manually copy your exported /AppData/ folder (from external drive) to the new PC.
+9. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+    
 All software should now continue where you left of! enjoy!
 
 **Notes:**
