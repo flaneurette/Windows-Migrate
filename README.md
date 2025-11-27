@@ -28,6 +28,7 @@ This script allows you to **backup and restore user data, system settings, and i
 ## Features
 
 ### Backup / Export
+- Exports Windows product key to /Keys/ if it exists. (does not work on digital license!)
 - **User AppData** (optional, selective copying)
 - **Desktop folders**
 - **Browser profiles:** Chrome, Edge, Firefox
