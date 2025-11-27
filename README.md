@@ -68,6 +68,7 @@ This script allows you to **backup and restore user data, system settings, and i
   
   - Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it.
   - Option 2: In powershel (as admin) type:
+    
     ```Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe```
 
 ---
