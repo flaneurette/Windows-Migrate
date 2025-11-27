@@ -17,8 +17,7 @@ This script allows you to **backup and restore user data, system settings, and i
 3. As **administrator**, right-click `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
 4. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
 5. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
-6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install software using Winget (required for automated program installation).
-7. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+6. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
@@ -50,7 +49,6 @@ This script allows you to **backup and restore user data, system settings, and i
 - Restore **Browser profiles** (Chrome, Edge, Firefox)
 - Restore **PATH** environment variable
 - Restore **Firewall rules**
-- Install programs automatically using **Winget** (silent install if available)
 
 ---
 
