@@ -20,6 +20,8 @@ This script allows you to **backup and restore user data, system settings, and i
 6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install all exported software (using winget)
 7. As **administrator**, right-click `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
 8. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+After this: manually copy your exported /AppData/ folder (from external drive) to the new PC. 
+All software should now continue where you left of! enjoy!
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
