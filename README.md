@@ -17,7 +17,9 @@ This script allows you to **backup and restore user data, system settings, and i
 3. As **administrator**, right-click `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
 4. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
 5. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
-6. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install all exported software (using winget)
+7. As **administrator**, right-click `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
+8. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
@@ -50,6 +52,7 @@ This script allows you to **backup and restore user data, system settings, and i
 - Restore **Browser profiles** (Chrome, Edge, Firefox)
 - Restore **PATH** environment variable
 - Restore **Firewall rules**
+- Install all exported software automatically with winget
 
 ---
 
@@ -57,8 +60,14 @@ This script allows you to **backup and restore user data, system settings, and i
 
 - **Windows 10 or 11+**
 - **Administrator privileges** for some steps (Registry, Firewall, Wi-Fi)
+- Winget, to install new software automatically on the new PC.
 - Optional: **7-Zip** for faster and more reliable ZIP compression
 - Enough diskspace. The registry export can take up 500MB+ and a Chrome user Folder 2GB+. Prepare at least 5GB of free space!
+
+  **To install winget on new PC**,
+  Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it.
+  Option 2: In powershel (as admin) type: Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+
 ---
 
 ## Safety Notes
