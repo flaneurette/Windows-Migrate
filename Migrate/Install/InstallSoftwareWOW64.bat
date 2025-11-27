@@ -19,7 +19,6 @@ set "log_file=%TARGET%\Lists\install_log_wow64.txt"
 
 :: Initialize the log file
 echo Installation Log - %date% %time% > "%log_file%"
-echo Log file initialized at: %log_file%
 
 :: Loop through the software list
 for /f "usebackq delims=" %%S in ("%software_list_file%") do (
@@ -35,24 +34,18 @@ for /f "usebackq delims=" %%S in ("%software_list_file%") do (
         "$clean_name = [System.Text.RegularExpressions.Regex]::Replace($clean_name, '\s+', ' ').Trim();" ^
         "$clean_name"') do (
         set "search_name=%%a"
-        echo Debug: PowerShell normalized search name: !search_name!
     )
 
     :: Check if search name is empty and skip if it is
     if "!search_name!"=="" (
-        echo Empty search name after normalization. Skipping.
         echo Empty search name after normalization. Skipping. >> "%log_file%"
         set "skip_current=1"  :: Set flag to skip this iteration
     )
-
-    :: Debug output for normalized name
-    echo Debug: Normalized search name: !search_name!
 
     :: Step 2: Run the winget search with the cleaned name
     if !skip_current! equ 0 (
         echo Running winget search for "!search_name!"...
         winget search -q "!search_name!" > "%USERPROFILE%\Desktop\winget_search_output.txt"
-        echo winget search output saved to "%USERPROFILE%\Desktop\winget_search_output.txt"
 
         set counter=0
         for /f "tokens=1,2,3*" %%A in ('findstr /r /v "^$" "%USERPROFILE%\Desktop\winget_search_output.txt"') do (
@@ -66,7 +59,6 @@ for /f "usebackq delims=" %%S in ("%software_list_file%") do (
             for /f "tokens=1" %%w in ("!search_name!") do set "first_word=%%w"
             echo Searching for first word: !first_word!
             winget search -q "!first_word!" > "%USERPROFILE%\Desktop\winget_search_output.txt"
-            echo winget search output saved to "%USERPROFILE%\Desktop\winget_search_output.txt"
 
             :: Reset the counter and try again with just the first word
             set counter=0
