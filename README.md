@@ -16,7 +16,9 @@ This script allows you to **backup and restore user data, system settings, and i
 Then proceed..
 
 ### On the new Windows PC:
-1. Copy the `Migrate` folder to your **Desktop**. Then, follow these steps **in order** for maximum safety:
+1. Copy the `Migrate` folder to your **Desktop** (from external backup). 
+
+Then, follow these steps **in order** for maximum safety:
 2. As **administrator**, right-click `Migrate/Install/InstallFirewall.bat` to restore firewall rules.
 3. As **administrator**, right-click `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
 4. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
