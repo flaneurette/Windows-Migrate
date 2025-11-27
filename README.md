@@ -74,9 +74,11 @@ All software should now continue where you left of! enjoy!
   **To install winget on new PC**
   
   - Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it.
-  - Option 2: In powershel (as admin) type:
+  - Option 2: (preferred)
+  - Download winget manually: https://aka.ms/getwinget
+  - Then, in powershell navigate to the /Downloads/ folder and (as admin) type:
     
-    ```Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe```
+    ```Add-AppxPackage -Path Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle```
 
 ---
 
