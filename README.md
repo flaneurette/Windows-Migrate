@@ -64,9 +64,10 @@ This script allows you to **backup and restore user data, system settings, and i
 - Optional: **7-Zip** for faster and more reliable ZIP compression
 - Enough diskspace. The registry export can take up 500MB+ and a Chrome user Folder 2GB+. Prepare at least 5GB of free space!
 
-  **To install winget on new PC**,
-  Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it.
-  Option 2: In powershel (as admin) type: Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+  **To install winget on new PC**
+  
+  - Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it.
+  - Option 2: In powershel (as admin) type: Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
 
 ---
 
