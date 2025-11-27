@@ -46,7 +46,6 @@ for /f "usebackq delims=" %%S in ("%software_list_file%") do (
     if !skip_current! equ 0 (
         echo Running winget search for "!search_name!"...
         winget search -q "!search_name!" > "%USERPROFILE%\Desktop\winget_search_output.txt"
-        echo winget search output saved to "%USERPROFILE%\Desktop\winget_search_output.txt"
 
         set counter=0
         for /f "tokens=1,2,3*" %%A in ('findstr /r /v "^$" "%USERPROFILE%\Desktop\winget_search_output.txt"') do (
