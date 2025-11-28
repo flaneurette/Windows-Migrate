@@ -75,7 +75,7 @@ All software should now continue where you left of! enjoy!
   
   - Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it. 
   Permalink: https://apps.microsoft.com/detail/9nblggh4nns1
-  - Option 2: (preferred)
+  - Option 2:
   - Download winget manually: https://aka.ms/getwinget
   - Then, in powershell navigate to the /Downloads/ folder and (as admin) type:
     
