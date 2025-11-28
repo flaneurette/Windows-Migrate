@@ -67,10 +67,10 @@ All software should now continue where you left of! enjoy!
 
 - **Windows 10 or 11+**
 - **Administrator privileges** for some steps (Registry, Firewall, Wi-Fi)
-- Winget, to install new software automatically on the new PC.
 - Optional: **7-Zip** for faster and more reliable ZIP compression
 - Enough diskspace. The registry export can take up 500MB+ and a Chrome user Folder 2GB+. Prepare at least 5GB of free space!
-
+- Winget, to install new software automatically on the new PC.
+  
   **To install winget on new PC**
   
   - Option 1: open the Microsoft Store and locate: "App Installer" or "Winget", and install it if you don't have it. 
