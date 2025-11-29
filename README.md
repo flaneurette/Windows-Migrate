@@ -32,11 +32,7 @@ All software should now continue where you left of! enjoy!
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
 - Upon software installation: The software guesses installed software names for winget. The install software program is therefore interactive, and lists possible package candidates, and then asks the user to select an option for each package to install, as winget hosts many versions i.e. different packages! Installation of software with winget is quick, faster than manually downloading and installing. So we recommend using it!
 - There is also a `Migrate/Install/Checksums.bat` file, which can be used to verify newly installed/downloaded software. It scans the `/Downloads/` folder and generates checksums if desired.
-
-**Final step**
-
-If you haven't hardened your Windows Firewall yet, you can do so with this extra powershell script (highly recommended):
-
+- If you haven't hardened your Windows Firewall yet, you can do so with this extra powershell script (highly recommended):
 <a href="https://github.com/flaneurette/Harden-Windows-OS-Firewall">https://github.com/flaneurette/Harden-Windows-OS-Firewall</a>
 
 ## Features
