@@ -38,14 +38,24 @@ if "%configid%"=="" goto askid
 echo You entered: %configid%
 echo Setting DNS over HTTPS templates (may not show in Network Settings)...
 
-powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate \"https://dns.nextdns.io/%configid%\" -AutoUpgrade $true"
-powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate \"https://dns.nextdns.io/%configid%\" -AutoUpgrade $true"
+echo Adding DNS-over-HTTPS servers...
+:: powershell -NoProfile -Command "netsh dns add encryption 45.90.28.0 'https://dns.nextdns.io/%configid%'"
+:: powershell -NoProfile -Command "netsh dns add encryption 45.90.30.0 'https://dns.nextdns.io/%configid%'"
+
+echo Attempting to add DoH templates (may fail on older Windows)...
+powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
+powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
+
+echo Done! DNS queries to NextDNS are now encrypted.
+
 :: Not working... powershell -Command "Set-DnsClientDohPreference -InterfaceAlias "%selected%" -DohSettings Preferred"
 
 echo === Checking DNS... NextDNS should say True at AutoUpgrade. Please confirm. If not, then manually edit the adapter! ===
 powershell -NoProfile -Command "Get-DnsClientDohServerAddress"
 echo === Checking global DoH/DoT. Please confirm if enabled. If not, then manually edit the adapter! ===
 powershell -Command "netsh dns show global"
+echo === Encryption ===
+powershell -NoProfile -Command "netsh dns show encryption"
 
 echo == Done. ==
 pause
