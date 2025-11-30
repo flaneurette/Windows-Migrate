@@ -30,7 +30,7 @@ netsh interface ip set dns name="%selected%" static 45.90.28.0 primary
 netsh interface ip add dns name="%selected%" 45.90.30.0 index=2
 echo === Successfully changed the DNS adapter settings! ===
 echo NOTE: Manually check if DNS over HTTPS is selected, sometimes it fails...
-echo You might then have to open network settings and manually select On (manual template) and enter https://dns.nextdns.io/{confidid} on both DNS services!
+echo You might then have to open network settings and manually select On (manual template) and enter https://dns.nextdns.io/{configid} on both DNS services!
 echo .
 
 REM === Enable DNS over HTTPS using PowerShell ===
