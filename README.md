@@ -25,7 +25,7 @@ Then proceed..
 7. As **administrator**, right-click `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
 8. Manually copy your exported /AppData/ folder (from external drive) to the new PC.
 9. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
-10. Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS servers to NextDNS, and optionally download NextDNS software! (optional, recommended)
+10. Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS, and optionally download NextDNS software! (optional, recommended)
     
 All software should now continue where you left of! enjoy!
 
