@@ -29,15 +29,19 @@ REM === Set standard DNS first ===
 netsh interface ip set dns name="%selected%" static 45.90.28.0 primary
 netsh interface ip add dns name="%selected%" 45.90.30.0 index=2
 echo === Successfully changed the DNS adapter settings! ===
-echo NOTE: Manually check if DNS over HTTPS is selected, sometimes it fails...
-echo You might then have to open network settings and manually select On (manual template) and enter https://dns.nextdns.io/{configid} on both DNS services!
-echo .
 
-REM === Enable DNS over HTTPS using PowerShell ===
-:: this often fails!
-:: powershell -Command "Set-DnsClientServerAddress -InterfaceAlias '%selected%' -ServerAddresses ('45.90.28.0','45.90.30.0')"
-:: powershell -Command "Set-DnsClient -InterfaceAlias '%selected%' -UseDoH $true"
-:: echo DNS and DNS-over-HTTPS enabled for %selected%.
+:askid
+set /p configid=Enter your NextDNS config ID: 
+if "%configid%"=="" goto askid
+
+echo You entered: %configid%
+echo Setting DNS over HTTPS templates (may not show in Network Settings)...
+
+powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate \"https://dns.nextdns.io/%configid%\""
+powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate \"https://dns.nextdns.io/%configid%\""
+
+echo == Done. ==
+pause
 
 REM === Ask user if they want to install NextDNS ===
 :installprompt
