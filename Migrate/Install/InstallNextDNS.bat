@@ -44,6 +44,8 @@ powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -
 
 echo === Checking DNS... NextDNS should say True at AutoUpgrade. Please confirm. If not, then manually edit the adapter! ===
 powershell -NoProfile -Command "Get-DnsClientDohServerAddress"
+echo === Checking global DoH/DoT. Please confirm if enabled. If not, then manually edit the adapter! ===
+powershell -Command "netsh dns show global"
 
 echo == Done. ==
 pause
