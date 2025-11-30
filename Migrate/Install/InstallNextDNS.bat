@@ -54,8 +54,6 @@ echo === Checking DNS... NextDNS should say True at AutoUpgrade. Please confirm.
 powershell -NoProfile -Command "Get-DnsClientDohServerAddress"
 echo === Checking global DoH/DoT. Please confirm if enabled. If not, then manually edit the adapter! ===
 powershell -Command "netsh dns show global"
-echo === Encryption ===
-powershell -NoProfile -Command "netsh dns show encryption"
 
 echo == Done. ==
 pause
