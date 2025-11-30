@@ -38,8 +38,9 @@ if "%configid%"=="" goto askid
 echo You entered: %configid%
 echo Setting DNS over HTTPS templates (may not show in Network Settings)...
 
-powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate \"https://dns.nextdns.io/%configid%\""
-powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate \"https://dns.nextdns.io/%configid%\""
+powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate \"https://dns.nextdns.io/%configid%\" -AutoUpgrade $true"
+powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate \"https://dns.nextdns.io/%configid%\" -AutoUpgrade $true"
+:: Not working... powershell -Command "Set-DnsClientDohPreference -InterfaceAlias "%selected%" -DohSettings Preferred"
 
 echo == Done. ==
 pause
