@@ -42,6 +42,9 @@ powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -
 powershell -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate \"https://dns.nextdns.io/%configid%\" -AutoUpgrade $true"
 :: Not working... powershell -Command "Set-DnsClientDohPreference -InterfaceAlias "%selected%" -DohSettings Preferred"
 
+echo === Checking DNS... NextDNS should say True at AutoUpgrade. Please confirm. If not, then manually edit the adapter! ===
+powershell -NoProfile -Command "Get-DnsClientDohServerAddress"
+
 echo == Done. ==
 pause
 
