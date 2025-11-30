@@ -26,10 +26,11 @@ set selected=!adapter%choice%!
 echo You selected: %selected%
 
 REM === Set standard DNS first ===
+echo === Setting NextDNS records ===
 netsh interface ip set dns name="%selected%" static 45.90.28.0 primary
 netsh interface ip add dns name="%selected%" 45.90.30.0 index=2
-echo === Successfully changed the DNS adapter settings! ===
-
+echo Successfully changed the DNS adapter settings!
+echo Next step.
 :askid
 set /p configid=Enter your NextDNS config ID: 
 if "%configid%"=="" goto askid
