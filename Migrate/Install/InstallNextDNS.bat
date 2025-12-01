@@ -25,10 +25,19 @@ if %choice% LSS 1 goto ask
 set selected=!adapter%choice%!
 echo You selected: %selected%
 
+
+:askdnsid1
+set /p dnsid1=Enter your NextDNS DNS server 1: 
+if "%dnsid1%"=="" goto askdnsid1
+
+:askdnsid2
+set /p dnsid2=Enter your NextDNS DNS server 2: 
+if "%dnsid2%"=="" goto askdnsid2
+
 REM === Set standard DNS first ===
 echo === Setting NextDNS records ===
-netsh interface ip set dns name="%selected%" static 45.90.28.0 primary
-netsh interface ip add dns name="%selected%" 45.90.30.0 index=2
+netsh interface ip set dns name="%selected%" static %dnsid1% primary
+netsh interface ip add dns name="%selected%" %dnsid2%  index=2
 echo Successfully changed the DNS adapter settings!
 echo Next step.
 :askid
@@ -39,12 +48,12 @@ echo You entered: %configid%
 echo Setting DNS over HTTPS templates (may not show in Network Settings)...
 
 echo Adding DNS-over-HTTPS servers...
-:: powershell -NoProfile -Command "netsh dns add encryption 45.90.28.0 'https://dns.nextdns.io/%configid%'"
-:: powershell -NoProfile -Command "netsh dns add encryption 45.90.30.0 'https://dns.nextdns.io/%configid%'"
+:: powershell -NoProfile -Command "netsh dns add encryption %dnsid1%  'https://dns.nextdns.io/%configid%'"
+:: powershell -NoProfile -Command "netsh dns add encryption %dnsid2%  'https://dns.nextdns.io/%configid%'"
 
 echo Attempting to add DoH templates (may fail on older Windows)...
-powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.28.0' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
-powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '45.90.30.0' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
+powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '%dnsid1%' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
+powershell -NoProfile -Command "Add-DnsClientDohServerAddress -ServerAddress '%dnsid2%' -DohTemplate 'https://dns.nextdns.io/%configid%' -AutoUpgrade $true"
 
 echo Done! DNS queries to NextDNS are now encrypted.
 
