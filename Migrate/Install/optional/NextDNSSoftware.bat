@@ -1,3 +1,6 @@
+@echo off
+setlocal enabledelayedexpansion
+
 REM === Ask user if they want to install NextDNS ===
 :installprompt
 set /p installChoice=Do you want to install NextDNS software for encrypted DNS? optional. (Y/N): 
