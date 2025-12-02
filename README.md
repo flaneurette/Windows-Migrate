@@ -6,7 +6,7 @@ This script allows you to **backup and restore user data, system settings, and i
 
 ## Table of Contents
 
-- [Disclaimer](#⚠️-disclaimer)
+- [Disclaimer](#disclaimer)
 - [Why `.bat` Files?](#why-bat-files)
 - [Installation](#installation)
   - [On the old Windows PC](#on-the-old-windows-pc)
