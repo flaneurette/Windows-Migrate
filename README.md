@@ -36,7 +36,7 @@ As administrator, right click:
 
 - `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred)
 - `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
-- `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
+- `Migrate/Install/Optional/StirlingPDFSoftware.bat` installs Stirling PDF software (optional, recommended)
 - `Migrate/Install/Optional/Utilities.bat` installs many different software packages, prompted to install (optional, recommended)
 
 **Notes:**
