@@ -19,7 +19,7 @@ Currently these bat installers can install:
 
 # Manual
 
-You could also mnually install each software package. Below are the links.
+You could also manually install each software package. Below are the links.
 
 Run Utilities.bat to install them.
 
