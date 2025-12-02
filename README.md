@@ -69,6 +69,12 @@ We chose `.bat` files intentionally for several reasons:
 
 ## Installation
 
+Verification.
+
+As administrator, right click and run `/Migrate/verify.bat`
+
+This checks if all files are valid. It should return OK. If it fails, do not proceed, delete all files and open a ticket and please post the console output.
+
 ### On the old Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Follow these steps **in order**
 2. As administrator, right click:
