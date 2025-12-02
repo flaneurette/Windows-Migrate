@@ -4,6 +4,22 @@ A **one-click FULL Windows migration and restore toolkit** in a single batch fil
 
 This script allows you to **backup and restore user data, system settings, and installed programs** between Windows PCs, making migration simple, safe, and mostly automated.
 
+## Table of Contents
+
+- [Disclaimer](#⚠️-disclaimer)
+- [Why `.bat` Files?](#why-bat-files)
+- [Installation](#installation)
+  - [On the old Windows PC](#on-the-old-windows-pc)
+  - [On the new Windows PC](#on-the-new-windows-pc)
+  - [Optional Extras](#optional-extras)
+- [Features](#features)
+  - [Backup / Export](#backup--export)
+  - [Restore / Import](#restore--import)
+- [Requirements](#requirements)
+- [Safety Notes](#safety-notes)
+- [License](#license)
+
+
 ## ⚠️ Disclaimer
 
 This repository contains scripts that interact deeply with Windows internals, including:
