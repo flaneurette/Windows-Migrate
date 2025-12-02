@@ -26,13 +26,13 @@ Then proceed..
 8. Manually copy your exported /AppData/ folder (from external drive) to the new PC.
 9. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
+All software should now continue where you left of! enjoy!
+
 Optional:
 - Extra: As **administrator**, right-click `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download NextDNS software! (optional)
 - Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed)
 - Extra: As **administrator**, right-click `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
 - Extra: As **administrator**, right-click `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
-
-All software should now continue where you left of! enjoy!
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
