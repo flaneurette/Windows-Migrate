@@ -47,7 +47,7 @@ if /i not "%CONFIRM%"=="Y" (
 :: Install using msiexec
 :: -------------------------------
 echo Installing %product_name%...
-msiexec /i "%SOFTWARE_EXE%" /quiet /norestart
+powershell -Command "Start-Process 'msiexec.exe' -ArgumentList '/i \"%SOFTWARE_EXE%\" /norestart' -Verb RunAs -Wait"
 
 :: Check exit code
 if %ERRORLEVEL% neq 0 (
@@ -60,7 +60,7 @@ if %ERRORLEVEL% neq 0 (
 :: Cleanup
 :: -------------------------------
 echo Cleaning up...
-del "%SOFTWARE_EXE%"
+:: del "%SOFTWARE_EXE%"
 
 echo Done.
 pause
