@@ -11,7 +11,7 @@ These are just (network) helper scripts.
 
 Currently these bat installers can install:
 
-- Portmaster (a very good firewall)
+- Portmaster (a very good firewall for AMD users. Check their website if you use intel)
 - NextDNS (recommended DNS for all users)
 - Stirling PDF (a recommended free Acrobat alternative)
 - Putty (mainly for developers: terminal emulator)
