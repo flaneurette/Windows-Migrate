@@ -4,6 +4,21 @@ A **one-click FULL Windows migration and restore toolkit** in a single batch fil
 
 This script allows you to **backup and restore user data, system settings, and installed programs** between Windows PCs, making migration simple, safe, and mostly automated.
 
+## ⚠️ Disclaimer
+
+This repository contains scripts that interact deeply with Windows internals, including:
+
+- Exporting the registry hives
+- Reading Windows product keys
+- Copying system data and user profiles
+- Exporting the firewall
+- Exporting software registries
+- Making automated backups
+- And more.
+
+**Please review all scripts before running. Do NOT use on untrusted systems.**  
+The scripts are intended for IT administrators and power users for **legitimate migration and backup purposes**.
+
 ## Installation
 
 ### On the old Windows PC:
