@@ -19,6 +19,35 @@ This repository contains scripts that interact deeply with Windows internals, in
 **Please review all scripts before running. Do NOT use on untrusted systems.**  
 The scripts are intended for IT administrators and power users for **legitimate migration and backup purposes**.
 
+## Why `.bat` Files?
+
+You might wonder: *“Why did you use batch files instead of an executable?”*
+
+We chose `.bat` files intentionally for several reasons:
+
+1. **Full transparency**  
+   - Every command in a `.bat` file is readable. You can audit it line by line to see exactly what it does.  
+   - With an `.exe`, all operations are hidden, so you would need reverse-engineering skills to verify safety.
+
+2. **Safety first**  
+   - `.bat` files cannot silently inject code, install hidden drivers, or persist in ways executables can.  
+   - Even though they require admin privileges for some tasks, they do *only what you can see*.
+
+3. **Cross-system compatibility**  
+   - Batch files work natively on Windows 10 and 11 without any extra dependencies.  
+   - You don’t need a compiler, installer, or any third-party software.
+
+4. **Ease of modification**  
+   - If you want to tweak or customize the migration process, you can directly edit the `.bat` scripts.  
+   - With an `.exe`, modifying behavior safely is extremely difficult.
+
+5. **Transparency builds trust**  
+   - Using `.bat` makes it clear that this tool is designed for IT admins and power users who care about **seeing and controlling what happens** on their system.
+
+**Bottom line:**  
+`.bat` files may look “scary” at first glance, but they are actually the **safest, most auditable, and flexible** way to perform full Windows migration.
+
+
 ## Installation
 
 ### On the old Windows PC:
