@@ -167,7 +167,7 @@ To check and verify the hash of each script, you can use CertUtil (built-in Wind
 
 Open Command Prompt.
 
-Run: `certutil -hashfile "Migrate\Export\ExportWindowsSettings.bat" SHA256`
+Run: `certutil -hashfile "FILE_PATH" SHA256`
 
 Verify against valid hashes:
 
