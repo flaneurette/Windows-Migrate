@@ -21,6 +21,8 @@ Currently these bat installers can install:
 
 You could also mnually install each software package. Below are the links.
 
+Run Utilities.bat to install them.
+
 
 | Name               | Purpose / Category              | Official Download URL                                                                                                                                                        | SHA256 / Notes                                                   | Recommended For                   |
 | ------------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------- |
