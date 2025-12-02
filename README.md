@@ -45,7 +45,7 @@ The scripts are intended for IT administrators and power users for **legitimate 
 
 As administrator, right click and run `/Migrate/Verify.bat`
 
-This checks if all files are valid by comparing their hashes. It should return OK. If it fails, do not proceed, delete all files and open a ticket and please post the console output.
+This checks if all files are valid by comparing their hashes. It should return OK. If it fails, do not proceed, delete all files and open a `issue` and please post the console output.
 
 ### On the old Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Follow these steps **in order**
