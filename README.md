@@ -141,6 +141,8 @@ When done, manually delete the /Migrate/ folder from your Desktop.
 
 Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
+☕️ And if you spilled your coffee while running the scripts... maybe buy yourself a new one! ;-)
+
 ## Why `.bat` Files?
 
 You might wonder: *“Why did you use batch files instead of an executable?”*
