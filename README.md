@@ -17,6 +17,7 @@ This script allows you to **backup and restore user data, system settings, and i
   - [Restore / Import](#restore--import)
 - [Requirements](#requirements)
 - [Safety Notes](#safety-notes)
+- [Cleanup](#cleanup)
 - [License](#license)
 
 
@@ -152,6 +153,10 @@ As administrator, right click:
   - Then, in powershell navigate to the /Downloads/ folder and (as admin) type:
     
     ```Add-AppxPackage -Path Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle```
+
+## Cleanup
+
+When done, manually delete the /Migrate/ folder from your Desktop. Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
 ---
 
