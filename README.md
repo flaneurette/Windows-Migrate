@@ -156,7 +156,9 @@ As administrator, right click:
 
 ## Cleanup
 
-When done, manually delete the /Migrate/ folder from your Desktop. Do NOT save a copy (for security reasons.) unless you password encrypt it!
+When done, manually delete the /Migrate/ folder from your Desktop. 
+
+Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
 ---
 
