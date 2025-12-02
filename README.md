@@ -38,42 +38,13 @@ This repository contains scripts that interact deeply with Windows internals, in
 Eventhough all scripts are thoroughly tested on Windows 10 and Windows 11, edge cases may exist.
 The scripts are intended for IT administrators and power users for **legitimate migration and backup purposes**.
 
-## Why `.bat` Files?
-
-You might wonder: *“Why did you use batch files instead of an executable?”*
-
-We chose `.bat` files intentionally for several reasons:
-
-1. **Full transparency**  
-   - Every command in a `.bat` file is readable. You can audit it line by line to see exactly what it does.  
-   - With an `.exe`, all operations are hidden, so you would need reverse-engineering skills to verify safety.
-
-2. **Safety first**  
-   - `.bat` files cannot silently inject code, install hidden drivers, or persist in ways executables can.  
-   - Even though they require admin privileges for some tasks, they do *only what you can see*.
-
-3. **Cross-system compatibility**  
-   - Batch files work natively on Windows 10 and 11 without any extra dependencies.  
-   - You don’t need a compiler, installer, or any third-party software.
-
-4. **Ease of modification**  
-   - If you want to tweak or customize the migration process, you can directly edit the `.bat` scripts.  
-   - With an `.exe`, modifying behavior safely is extremely difficult.
-
-5. **Transparency builds trust**  
-   - Using `.bat` makes it clear that this tool is designed for IT admins and power users who care about **seeing and controlling what happens** on their system.
-
-**Bottom line:**  
-`.bat` files may look “scary” at first glance, but they are actually the **safest, most auditable, and flexible** way to perform full Windows migration.
-
-
 ## Installation
 
-Verification.
+### Verification.
 
-As administrator, right click and run `/Migrate/verify.bat`
+As administrator, right click and run `/Migrate/Verify.bat`
 
-This checks if all files are valid. It should return OK. If it fails, do not proceed, delete all files and open a ticket and please post the console output.
+This checks if all files are valid by comparing their hashes. It should return OK. If it fails, do not proceed, delete all files and open a ticket and please post the console output.
 
 ### On the old Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Follow these steps **in order**
@@ -167,6 +138,34 @@ When done, manually delete the /Migrate/ folder from your Desktop.
 
 Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
+## Why `.bat` Files?
+
+You might wonder: *“Why did you use batch files instead of an executable?”*
+
+We chose `.bat` files intentionally for several reasons:
+
+1. **Full transparency**  
+   - Every command in a `.bat` file is readable. You can audit it line by line to see exactly what it does.  
+   - With an `.exe`, all operations are hidden, so you would need reverse-engineering skills to verify safety.
+
+2. **Safety first**  
+   - `.bat` files cannot silently inject code, install hidden drivers, or persist in ways executables can.  
+   - Even though they require admin privileges for some tasks, they do *only what you can see*.
+
+3. **Cross-system compatibility**  
+   - Batch files work natively on Windows 10 and 11 without any extra dependencies.  
+   - You don’t need a compiler, installer, or any third-party software.
+
+4. **Ease of modification**  
+   - If you want to tweak or customize the migration process, you can directly edit the `.bat` scripts.  
+   - With an `.exe`, modifying behavior safely is extremely difficult.
+
+5. **Transparency builds trust**  
+   - Using `.bat` makes it clear that this tool is designed for IT admins and power users who care about **seeing and controlling what happens** on their system.
+
+**Bottom line:**  
+`.bat` files may look “scary” at first glance, but they are actually the **safest, most auditable, and flexible** way to perform full Windows migration.
+
 ## Checksums
 
 To check and verify the hash of each script, you can use CertUtil (built-in Windows tool)
@@ -197,7 +196,6 @@ Verify against valid hashes:
 | 5DFFF434F5ED000D226F138FAB65E958400BBB35C21F666A2214D973A5775EE6 | Migrate\Install\optional\Utilities.bat |
 | B6412EF6A0A7A5A649427B3CE81FC7F4D6D7CB7CFD6DC1828FA08CF989A1BE52 | Migrate\Install\optional\WinSCPSoftware.bat |
 | 64C3E88BC544CFDEBF44EC0C7E7D975BF8FF6C2EF6BFD9E2C4E023543DAECAAA | Migrate\Install\Uninstall\UninstallNextDNS.bat |
-
 
 ---
 
