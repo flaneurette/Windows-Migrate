@@ -29,8 +29,8 @@ Then proceed..
 All software should now continue where you left of! enjoy!
 
 Optional:
-- Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed: don't install both, as this migth fail!)
-- Extra: As **administrator**, right-click `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download NextDNS software! (optional)
+- Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed: don't install both, as this might fail!)
+- Extra: As **administrator**, right-click `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download extra NextDNS software! (optional, don't if you installed the previous one)
 - Extra: As **administrator**, right-click `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
 - Extra: As **administrator**, right-click `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
 
