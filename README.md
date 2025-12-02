@@ -20,7 +20,7 @@ This script allows you to **backup and restore user data, system settings, and i
 - [License](#license)
 
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This repository contains scripts that interact deeply with Windows internals, including:
 
