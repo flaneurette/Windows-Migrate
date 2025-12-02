@@ -160,7 +160,7 @@ When done, manually delete the /Migrate/ folder from your Desktop.
 
 Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
-# Checksums
+## Checksums
 
 | SHA256 Hash | File Path |
 |------------|-----------|
