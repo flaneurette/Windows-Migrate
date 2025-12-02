@@ -1,15 +1,21 @@
 @echo off
 setlocal
 
+:: -------------------------------
+:: Configuration
+:: -------------------------------
 set "product_name=Sterling PDF"
-
-set /p dummy=Safety prompt: Press Enter to install %product_name%...
-
-:: ---- Configuration ----
 set "SOFTWARE_URL=https://files.stirlingpdf.com/win-installer.exe"
-set "SOFTWARE_EXE=%TEMP%\win-installer.exe"
+set "SOFTWARE_EXE=%TEMP%\Stirling-PDF-windows-x86_64.msi"
 
-:: ---- Download using PowerShell ----
+:: -------------------------------
+:: Safety prompt
+:: -------------------------------
+set /p dummy=Safety prompt: Press Enter to download and install %product_name%...
+
+:: -------------------------------
+:: Download
+:: -------------------------------
 echo Downloading %product_name%...
 powershell -Command "Invoke-WebRequest -Uri '%SOFTWARE_URL%' -OutFile '%SOFTWARE_EXE%' -UseBasicParsing"
 
@@ -19,15 +25,17 @@ if not exist "%SOFTWARE_EXE%" (
     exit /b 1
 )
 
-:: ---- Generate SHA256 hash ----
+:: -------------------------------
+:: Generate SHA256 hash
+:: -------------------------------
 echo Generating SHA256 hash of downloaded file...
 for /f "tokens=*" %%A in ('powershell -Command "Get-FileHash -Path '%SOFTWARE_EXE%' -Algorithm SHA256 | Select-Object -ExpandProperty Hash"') do set "FILE_HASH=%%A"
 
-echo SHA256 hash of %product_name% installer:
+echo SHA256 hash of downloaded file:
 echo %FILE_HASH%
 echo.
 
-:: Optional: Ask user to confirm before installing
+:: Optional: ask user to continue
 set /p CONFIRM=Do you want to continue with installation? (Y/N): 
 if /i not "%CONFIRM%"=="Y" (
     echo Installation cancelled.
@@ -35,13 +43,24 @@ if /i not "%CONFIRM%"=="Y" (
     exit /b 0
 )
 
-:: ---- Install ----
-echo Launching %product_name% installer...
-powershell -Command "Start-Process '%SOFTWARE_EXE%' -Verb RunAs -Wait"
+:: -------------------------------
+:: Install using msiexec
+:: -------------------------------
+echo Installing %product_name%...
+msiexec /i "%SOFTWARE_EXE%" /quiet /norestart
 
-:: ---- Cleanup ----
+:: Check exit code
+if %ERRORLEVEL% neq 0 (
+    echo Installation may have failed. Exit code: %ERRORLEVEL%
+) else (
+    echo Installation completed successfully.
+)
+
+:: -------------------------------
+:: Cleanup
+:: -------------------------------
 echo Cleaning up...
 del "%SOFTWARE_EXE%"
 
-echo Done. %product_name% installed.
+echo Done.
 pause
