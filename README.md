@@ -162,6 +162,14 @@ Do NOT save a copy (for security reasons.) unless you password encrypt it!
 
 ## Checksums
 
+To check and verify the hash of each script, you can use CertUtil (built-in Windows tool)
+
+Open Command Prompt.
+
+Run: `certutil -hashfile "Migrate\Export\ExportWindowsSettings.bat" SHA256`
+
+Verify against valid hashes:
+
 | SHA256 Hash | File Path |
 |------------|-----------|
 | 2BC15002266D14CF0245208C50AD8AB7056A16DAE6FA0B730D50DAD0E331EC23 | Migrate\Export\CopyUserData.bat |
