@@ -30,7 +30,7 @@ Then proceed..
 
 All software should now continue where you left of! enjoy!
 
-Optional Extra's:
+**Optional Extra's:**
 
 As administrator, right click:
 
