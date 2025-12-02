@@ -60,7 +60,7 @@ if %ERRORLEVEL% neq 0 (
 :: Cleanup
 :: -------------------------------
 echo Cleaning up...
-:: del "%SOFTWARE_EXE%"
+del "%SOFTWARE_EXE%"
 
 echo Done.
 pause
