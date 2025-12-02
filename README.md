@@ -18,6 +18,7 @@ This script allows you to **backup and restore user data, system settings, and i
 - [Requirements](#requirements)
 - [Safety Notes](#safety-notes)
 - [Cleanup](#cleanup)
+- [Checksums](#checksums)
 - [License](#license)
 
 
