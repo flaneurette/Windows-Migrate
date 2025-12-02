@@ -8,8 +8,9 @@ This script allows you to **backup and restore user data, system settings, and i
 
 ### On the old Windows PC:
 1. Copy the `Migrate` folder to your **Desktop**. Follow these steps **in order**
-2. As **administrator**, right-click `Migrate/Export/ExportWindowsSettings.bat` to export all Windows settings.
-3. As **administrator**, right-click `Migrate/Export/CopyUserData.bat` to export user data (backup AppData & Desktop to external disk).
+2. As administrator, right click:
+3. `Migrate/Export/ExportWindowsSettings.bat` to export all Windows settings.
+4. `Migrate/Export/CopyUserData.bat` to export user data (backup AppData & Desktop to external disk).
 
 **Note**: After running these scripts, be sure that you copy the /Migrate/ folder from the old PC's Desktop to the new PC's Desktop. 
 (The CopyUserData.bat script also copies the entire desktop on your old PC to your external drive, so on the new PC you should copy the /Migrate/folder from the external backup to your new desktop!)
@@ -17,23 +18,25 @@ Then proceed..
 
 ### On the new Windows PC:
 1. Copy the `Migrate` folder (from external backup) to your **Desktop** . Then, follow these steps **in order** for maximum safety:
-2. As **administrator**, right-click `Migrate/Install/InstallFirewall.bat` to restore firewall rules.
-3. As **administrator**, right-click `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
-4. As **administrator**, right-click `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
-5. As **administrator**, right-click `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
-6. As **administrator**, right-click `Migrate/Install/InstallSoftware.bat` to install all exported software (using winget)
-7. As **administrator**, right-click `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
-8. Manually copy your exported /AppData/ folder (from external drive) to the new PC.
-9. As **administrator**, right-click `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
+2.  As administrator, right click:
+3. `Migrate/Install/InstallFirewall.bat` to restore firewall rules.
+4. `Migrate/Install/ImportHosts.bat` to restore hosts file (it also makes a backup of current one).
+5. `Migrate/Install/ImportWifi.bat` to restore Wi-Fi profiles.
+6. `Migrate/Install/ImportPath.bat` to restore the PATH environment variable.
+7. `Migrate/Install/InstallSoftware.bat` to install all exported software (using winget)
+8. `Migrate/Install/InstallSoftwareWOW64.bat` to install all exported WOW64 software (using winget)
+9.  Manually copy your exported /AppData/ folder (from external drive) to the new PC.
+10. `Migrate/Install/ImportBrowserData.bat` to restore browser profiles.
 
 All software should now continue where you left of! enjoy!
 
 Optional:
-- Extra: As **administrator**, right-click `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed: don't install both, as this might fail!)
-- Extra: As **administrator**, right-click `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download extra NextDNS software! (optional, don't if you installed the previous one)
-- Extra: As **administrator**, right-click `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
-- Extra: As **administrator**, right-click `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
-- Extra: As **administrator**, right-click `Migrate/Install/Optional/Utilities.bat` installs many different software packages, prompted to install (optional, recommended)
+As administrator, right click:
+- Extra: `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed: don't install both, as this might fail!)
+- Extra: `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download extra NextDNS software! (optional, don't if you installed the previous one)
+- Extra: `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
+- Extra: `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
+- Extra: `Migrate/Install/Optional/Utilities.bat` installs many different software packages, prompted to install (optional, recommended)
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
