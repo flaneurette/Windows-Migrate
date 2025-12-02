@@ -17,6 +17,7 @@ This repository contains scripts that interact deeply with Windows internals, in
 - And more.
 
 **Please review all scripts before running. Do NOT use on untrusted systems.**  
+Eventhough all scripts are thoroughly tested on Windows 10 and Windows 11, edge cases may exist.
 The scripts are intended for IT administrators and power users for **legitimate migration and backup purposes**.
 
 ## Why `.bat` Files?
