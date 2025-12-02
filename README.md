@@ -91,7 +91,7 @@ Then proceed..
 
 All software should now continue where you left of! enjoy!
 
-**Optional Extra's:**
+**Optional Extras:**
 
 As administrator, right click:
 
