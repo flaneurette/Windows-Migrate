@@ -7,7 +7,7 @@ These are just (network) helper scripts.
 
 - These bat files install common, popular or new software that is recommended to many users/developers in 2025/2026. 
 - Only install what you recognize. 
-- If you are curious about certain software, use a search egine to find out more about it.
+- If you are curious about certain software, use a search engine to find out more about it.
 
 Currently these bat installers can install:
 
