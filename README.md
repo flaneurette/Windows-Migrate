@@ -30,13 +30,12 @@ Then proceed..
 
 All software should now continue where you left of! enjoy!
 
-Optional:
+Optional Extra's:
 As administrator, right click:
-- Extra: `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred: no NextDNS software needed: don't install both, as this might fail!)
-- Extra: `Migrate/Install/Optional/NextDNSSoftware.bat` optionally download extra NextDNS software! (optional, don't if you installed the previous one)
-- Extra: `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
-- Extra: `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
-- Extra: `Migrate/Install/Optional/Utilities.bat` installs many different software packages, prompted to install (optional, recommended)
+- `Migrate/Install/InstallNextDNS.bat` to set the DNS to NextDNS (optional, preferred)
+- `Migrate/Install/Optional/PortMasterAMDSoftware.bat` installs Portmaster software on AMD platforms (optional, recommended)
+- `Migrate/Install/Optional/SterlingPDFSoftware.bat` installs Sterling PDF software (optional, recommended)
+- `Migrate/Install/Optional/Utilities.bat` installs many different software packages, prompted to install (optional, recommended)
 
 **Notes:**
 - Other files and settings do not have BAT installation scripts and require **manual installation or transfer** due to security and reliability reasons. These are: Registry hives HKLM, HKCU, HKCR, HKU, HKCC, Drivers, services, printers, startup programs, scheduled tasks, Windows activation status and restore points. These are included in the backup, in case you ever need them. If so, manually extract these items, if so desired.
