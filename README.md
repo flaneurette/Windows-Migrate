@@ -7,7 +7,7 @@ This script allows you to **backup and restore user data, system settings, and i
 ## Table of Contents
 
 - [Disclaimer](#disclaimer)
-- [Why `.bat` Files?](#why-bat-files)
+- [Verification](#verification)
 - [Installation](#installation)
   - [On the old Windows PC](#on-the-old-windows-pc)
   - [On the new Windows PC](#on-the-new-windows-pc)
@@ -18,6 +18,7 @@ This script allows you to **backup and restore user data, system settings, and i
 - [Requirements](#requirements)
 - [Safety Notes](#safety-notes)
 - [Cleanup](#cleanup)
+- [Why `.bat` Files?](#why-bat-files)
 - [Checksums](#checksums)
 - [License](#license)
 
@@ -40,7 +41,7 @@ The scripts are intended for IT administrators and power users for **legitimate 
 
 ## Installation
 
-### Verification.
+### Verification
 
 As administrator, right click and run `/Migrate/Verify.bat`
 
