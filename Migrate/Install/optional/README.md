@@ -14,4 +14,5 @@ Currently these bat installers can install:
 - Portmaster (a very good firewall)
 - NextDNS (recommended DNS for all users)
 - Stirling PDF (a recommended free Acrobat alternative)
-- Putty (mainly for developers)
+- Putty (mainly for developers: terminal emulator)
+- WinSCP (mainly for developers: secure copy)
